@@ -171,19 +171,18 @@ public class Frame extends JFrame implements KeyListener, ActionListener {
                             + " Words per Minute"))
                     / 2,
                     g.getFont().getSize() * 6);
-            g.drawString(message,SCREEN_WIDTH - metrics.stringWidth(message)/2,g.getFont().getSize() * 8);
             g.drawString("Typing speed : " + cpm + " Characters per Minute", (SCREEN_WIDTH - metrics.stringWidth(
                 "Typing speed : " + cpm
                         + " Characters per Minute"))
                 / 2,
-                g.getFont().getSize() * 10);
+                g.getFont().getSize() * 8);
+                g.drawString(message, (SCREEN_WIDTH - metrics.stringWidth(
+                    message)) / 2,
+                    g.getFont().getSize() * 10);
             g.drawString(String.format("Accuracy : %.2f%%", acc), (SCREEN_WIDTH - metrics.stringWidth(
                     String.format("Accuracy : %.2f%%", acc)))
                     / 2,
                     g.getFont().getSize() * 12);
-            /*/g.drawString(message, (SCREEN_WIDTH - metrics.stringWidth(
-                    message)) / 2,
-                    g.getFont().getSize() * 1);*/
            
             ended = false;
         }
